@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #C59B46;
+    --gold-light: #E7C878;
+    --gold-dark: #8C621E;
+    --gold-shimmer: linear-gradient(135deg, #ECC872 0%, #B8860B 50%, #F5DE98 100%);
+    --burgundy-royal: #7A1224;
+    --burgundy-deep: #4A0813;
+    --burgundy-subtle: #982236;
+    --cream-bg: #FAF5EB;
+    --cream-card: #FDFBF6;
+    --cream-border: #E8DCC9;
+  }
+
+  body {
+    background-color: #FAF5EB;
+    color: #3B261D;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-script {
+  font-family: 'Great Vibes', 'Alex Brush', cursive;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Luxury Gold & Burgundy Gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #996515 0%, #D4AF37 35%, #8C621E 70%, #C59B46 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(197, 155, 70, 0.4);
+}
+
+.gold-glow {
+  box-shadow: 0 4px 20px rgba(197, 155, 70, 0.18);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C59B46;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7A1224;
+}
+
+/* Subtle Floating Petals & Glow Keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+/* Custom smooth mobile container wrapper */
+.mobile-frame-container {
+  max-width: 460px;
+  margin: 0 auto;
+  box-shadow: 0 0 50px rgba(74, 8, 19, 0.12);
+  background: #FAF5EB;
+  position: relative;
+  min-height: 100vh;
+}
